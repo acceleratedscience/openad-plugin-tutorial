@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "openad_plugin_fingerprint"
+version = "0.0.1"
+description = "Demo plugin for plugin developers"
+keywords= ["fingerprint", "plugin", "openad"]
+authors = [
+  "Moenen Erbuer <moenen.erbuer@ibm.com>",
+]
+maintainers = [
+  "Moenen Erbuer <moenen.erbuer@ibm.com>",
+]
+homepage = ""
+documentation = ""
+repository = ""
+readme = "README.md"
+license = "MIT"
+classifiers = [
+    "Operating System :: OS Independent",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Typing :: Typed",
+    "Programming Language :: Python :: 3.11"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+openad_tools = { git = "ssh://git@github.com/acceleratedscience/openad-tools", tag = "v0.0.2" }
+
+
+
+
+########## Do not below this line ##########
+
+
+
+
+[tool.black]
+line-length=120
+
+[build-system]
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

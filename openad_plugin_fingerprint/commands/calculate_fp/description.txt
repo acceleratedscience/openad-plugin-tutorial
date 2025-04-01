@@ -1,0 +1,36 @@
+Calculate different types of molecule fingerprints using RDKit. This will return the RDKit fingerprint object for further processing.
+
+You can either pass a single SMILES, a a list of smiles, or refer to your molecule working set.
+
+
+<h1>Fingerprint types</h1>
+
+<cmd>mfp</cmd>: Morgan fingeprint (default)
+<cmd>rdk</cmd>: RDKit fingerprint
+<cmd>ap</cmd>:  Atom pair fingerprint
+<cmd>tt</cmd>:  Topological torsion fingerprint
+<cmd>fm</cmd>:  Feature Morgan fingerprint
+     These are created using a Morgan generator which uses a different method of assigning atom invariants (atom types).
+
+
+<h1>Examples</h1>
+- Calculate a morgan fingerprint for a single smiles:
+    <cmd>fp calc for C1=CC(=C(C=C1CCN)O)O</cmd>
+
+- Calculate an atom pair fingerprint for a list of smiles:
+    <cmd>fp calc ap for [CC(C)[N+](=O)[O-],O=C1CNC(=O)N1,Nc1ccccc1O]</cmd>
+
+- Calculate a topological torsion fingerprint for your molecule working set and update your molecules with the result:
+    <soft># Add molecules to your working set</soft>
+    <cmd>add mol CC(C)[N+](=O)[O-] basic force</cmd>
+    <cmd>add mol O=C1CNC(=O)N1 basic force</cmd>
+    <cmd>add mol Nc1ccccc1O basic force</cmd>
+
+    <soft># Calculate fingerprint and update</soft>
+    <cmd>fp calc ap for @mws update</cmd>
+
+    <soft># See the result reflected in the molecule working set</soft>
+    <cmd>show mols</cmd>
+    <cmd>show mol CC(C)[N+](=O)[O-]</cmd>
+    <cmd>show mol O=C1CNC(=O)N1</cmd>
+    <cmd>show mol Nc1ccccc1O</cmd>

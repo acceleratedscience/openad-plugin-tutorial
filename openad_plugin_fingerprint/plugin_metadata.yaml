@@ -1,0 +1,7 @@
+name: Fingerprint
+namespace: fp
+description: Calculate a molecule's fingerprints using RDKit.
+author: Moenen Erbuer @ IBM Research
+version: 0.0.1
+github: null
+website: null
