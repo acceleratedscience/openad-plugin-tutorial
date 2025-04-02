@@ -66,7 +66,7 @@ class PluginCommand:
         cmd = parser.as_dict()
         # print(cmd)
 
-        # parse identifiers
+        # Parse identifiers
         from_mws = "mws" in cmd
         # A. from molecule working set
         if from_mws:
