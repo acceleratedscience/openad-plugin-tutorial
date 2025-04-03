@@ -9,9 +9,9 @@ authors = [
 maintainers = [
   "Moenen Erbuer <moenen.erbuer@ibm.com>",
 ]
-homepage = ""
-documentation = ""
-repository = ""
+homepage = "http://example.com"
+documentation = "http://example.com/docs"
+repository = "https://github.com/example/openad-plugin-fingerprint"
 readme = "README.md"
 license = "MIT"
 classifiers = [
